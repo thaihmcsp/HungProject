@@ -16,6 +16,7 @@ const routesAddHistory = require("./routes/addHistory");
 const routesChangePassword = require("./routes/changePassword");
 var cors = require("cors");
 const app = express();
+ 
 
 
 const port = process.env.PORT || 9527;
