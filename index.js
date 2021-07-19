@@ -17,6 +17,10 @@ const routesChangePassword = require("./routes/changePassword");
 var cors = require("cors");
 const app = express();
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./test.html"));
+});
+
 const port = process.env.PORT || 9527;
 app.use(cors());
 
