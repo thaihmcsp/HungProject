@@ -63,7 +63,7 @@ function HistoryBill() {
       const cookies = getCookie("user");
       let responseHistory = await axios({
         method: "PUT",
-        url: "http://localhost:9527/user/addhistory",
+        url: "/user/addhistory",
         headers: { Authorization: cookies },
         data: {
           history: { history },

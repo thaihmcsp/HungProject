@@ -415,7 +415,7 @@ function RenderThanhToan(props) {
       const cookies = getCookie("user");
       let response = await axios({
         method: "PUT",
-        url: "http://localhost:9527/user/dashboard",
+        url: "/user/dashboard",
         headers: { Authorization: cookies },
         data: {
           address: { array },
@@ -499,7 +499,7 @@ function RenderThanhToan(props) {
       const cookies = getCookie("user");
       let response = await axios({
         method: "PUT",
-        url: "http://localhost:9527/user/addbill",
+        url: "/user/addbill",
         headers: { Authorization: cookies },
         data: {
           bill: { cloneBill },

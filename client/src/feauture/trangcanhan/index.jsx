@@ -79,7 +79,7 @@ function TrangCaNhan(props) {
         const cookies = getCookie("user");
         let response = await axios({
           method: "POST",
-          url: "http://localhost:9527/user/addinfor",
+          url: "/user/addinfor",
           headers: { Authorization: cookies },
           data: {
             phonenumber,
@@ -104,12 +104,12 @@ function TrangCaNhan(props) {
         try {
           let response = await axios({
             method: "POST",
-            url: "http://localhost:9527/user/dashboard",
+            url: "/user/dashboard",
             headers: { Authorization: cookies },
           });
           let upCart = await axios({
             method: "PUT",
-            url: "http://localhost:9527/user/addcart",
+            url: "/user/addcart",
             headers: { Authorization: cookies },
             data: {
               cartForUser: { cartForUser },

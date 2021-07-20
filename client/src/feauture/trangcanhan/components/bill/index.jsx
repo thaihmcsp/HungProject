@@ -60,7 +60,7 @@ function BillOFUser(props) {
       const cookies = getCookie("user");
       let responseBill = await axios({
         method: "PUT",
-        url: "http://localhost:9527/user/addbill",
+        url: "/user/addbill",
         headers: { Authorization: cookies },
         data: {
           bill: { cloneBill },
@@ -68,7 +68,7 @@ function BillOFUser(props) {
       });
       let responseHistory = await axios({
         method: "PUT",
-        url: "http://localhost:9527/user/addhistory",
+        url: "/user/addhistory",
         headers: { Authorization: cookies },
         data: {
           history: { history },

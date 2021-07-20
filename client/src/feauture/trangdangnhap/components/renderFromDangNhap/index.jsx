@@ -213,7 +213,7 @@ function RenderFormDangNhap(props) {
         let phoneNumber = user.phoneNumber;
         let avatar = user.photoURL;
         try {
-          let response = await axios.post("http://localhost:9527/user/SUWGG", {
+          let response = await axios.post("/user/SUWGG", {
             loginName,
             name,
             email,
@@ -258,7 +258,7 @@ function RenderFormDangNhap(props) {
     let passwordlValue = password.value.trim();
     if (formLogin.length === 2) {
       try {
-        let response = await axios.post("http://localhost:9527/user/login", {
+        let response = await axios.post("/user/login", {
           usernameValue,
           passwordlValue,
         });
@@ -317,7 +317,7 @@ function RenderFormDangNhap(props) {
 
     if (formSignup.length === 5) {
       try {
-        let response = await axios.post("http://localhost:9527/user/signup", {
+        let response = await axios.post("/user/signup", {
           usernameValue,
           emailValue,
           phonenumber,
@@ -372,7 +372,7 @@ function RenderFormDangNhap(props) {
     let emailValue = email.value.trim();
     if (formForget.length === 2) {
       try {
-        let response = await axios.post("http://localhost:9527/user/password", {
+        let response = await axios.post("/user/password", {
           usernameValue,
           emailValue,
         });

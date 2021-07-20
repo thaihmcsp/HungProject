@@ -165,7 +165,7 @@ function DetailTop(props) {
           const cookies = getCookie("user");
           let response = await axios({
             method: "PUT",
-            url: "http://localhost:9527/user/addcart",
+            url: "/user/addcart",
             headers: { Authorization: cookies },
             data: {
               cartForUser: { cartForUser },

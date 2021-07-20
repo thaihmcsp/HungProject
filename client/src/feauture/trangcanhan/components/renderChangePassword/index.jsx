@@ -137,7 +137,7 @@ function RenderChangePassword(props) {
       const cookies = getCookie("user");
       let response = await axios({
         method: "PUT",
-        url: "http://localhost:9527/user/changePassword",
+        url: "/user/changePassword",
         headers: { Authorization: cookies },
         data: {
           oldPasswordValue,

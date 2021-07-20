@@ -325,7 +325,7 @@ function RenderFormAddAddress(props) {
       const cookies = getCookie("user");
       let response = await axios({
         method: "PUT",
-        url: "http://localhost:9527/user/dashboard",
+        url: "/user/dashboard",
         headers: { Authorization: cookies },
         data: {
           address: { array },

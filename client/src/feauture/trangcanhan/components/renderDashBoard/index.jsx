@@ -240,7 +240,7 @@ function RenderDashBoard(props) {
         const cookies = getCookie("user");
         let response = await axios({
           method: "PUT",
-          url: "http://localhost:9527/user/addinfor",
+          url: "/user/addinfor",
           headers: { Authorization: cookies },
           data: {
             name,

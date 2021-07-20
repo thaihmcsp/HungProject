@@ -29,7 +29,7 @@ function App() {
       async function getDataUser() {
         let responseDataUser = await axios({
           method: "POST",
-          url: "http://localhost:9527/user/getData",
+          url: "/user/getData",
           headers: { Authorization: cookies },
         });
         if (responseDataUser.status === 200) {
