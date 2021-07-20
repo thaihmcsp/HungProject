@@ -17,10 +17,6 @@ const routesChangePassword = require("./routes/changePassword");
 var cors = require("cors");
 const app = express();
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "./test.html"));
-});
-
 const port = process.env.PORT || 9527;
 app.use(cors());
 
@@ -39,6 +35,10 @@ app.use("/user", routesLoginWgg);
 app.use("/user", routesDashboard);
 app.use("/user", routesForgetPassWord);
 app.use("/user", routesChangePassword);
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./test.html"));
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
