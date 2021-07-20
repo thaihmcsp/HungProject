@@ -1,0 +1,259 @@
+.cart-popup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  top: 44px;
+  width: 400px;
+  background-color: white;
+  border-radius: 4px;
+  display: none;
+  border: 0.5px solid black;
+
+  &::after {
+    content: "";
+    width: 52px;
+    height: 62px;
+    top: -54px;
+    position: absolute;
+    right: 0px;
+    display: none;
+  }
+
+  &_header {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: rgb(225, 220, 220);
+    &_title {
+      font-weight: 300;
+      color: black;
+      font-size: 1rem;
+    }
+  }
+  &_body {
+    width: 100%;
+  }
+}
+
+.list-item {
+  width: 100%;
+  margin: 4px 0;
+  background-color: white;
+  max-height: 348px;
+  overflow: auto;
+}
+
+.item-selected {
+  width: 100%;
+  height: 62px;
+  margin-bottom: 4px;
+  background-color: rgb(245, 240, 227);
+  transition: all 0.25s ease-in-out 0s;
+  &:hover {
+    background-color: white;
+  }
+  &_link {
+    display: flex;
+  }
+  &_left {
+    height: 58px;
+    width: 40px;
+    border: 0.5px solid black;
+    margin-left: 12px;
+    &_img {
+      background-image: url("../../../../../assets/images/logo.JPG");
+      height: 56px;
+      width: 38px;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+.item-selected_right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  &_name {
+    width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 300;
+    display: inline-block;
+    margin-left: 18px;
+    color: black;
+    position: relative;
+  }
+  &_price {
+    width: 84%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    color: red;
+  }
+}
+
+.cart-popup_no_item_link {
+  display: inline-block;
+  position: absolute;
+  top: 44px;
+  right: 0;
+  width: 342px;
+  height: 286px;
+  border-radius: 4px;
+  display: none;
+  background-color: rgb(245, 240, 227);
+  z-index: 2;
+  &:after {
+    content: "";
+    width: 52px;
+    height: 62px;
+    top: -54px;
+    position: absolute;
+    right: 0px;
+    display: none;
+  }
+  &:hover {
+    color: black;
+  }
+}
+
+.cart-popup_no_item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  color: black;
+  &:hover {
+    color: black;
+  }
+}
+
+.No-item-selected {
+  width: 50%;
+  height: 50%;
+  background-color: rgb(245, 240, 227);
+  background-image: url("../../../../../assets/images/logo__right--board.png");
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.item-selected_right_bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &-left,
+  &-mid {
+    font-size: 1rem;
+    color: black;
+    font-weight: 300;
+  }
+}
+.number_item_in_cart {
+  font-weight: 500;
+  padding-left: 6px;
+}
+
+.cart-popup_footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  border-radius: 4px;
+  margin-bottom: 2px;
+  background-color: rgb(225, 220, 220);
+  cursor: default;
+}
+
+.cart-popup_footer-link-left,
+.cart-popup_footer-link-right {
+  line-height: 42px;
+  width: 32%;
+  height: 42px;
+  border-radius: 4px;
+  color: black;
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  transition: all 0.25s ease-in-out 0s;
+}
+
+.cart-popup_footer-link-left {
+  background-color: black;
+  color: white;
+  &:hover {
+    background-color: rgb(223, 23, 27);
+    color: white;
+  }
+}
+
+.cart-popup_footer-link-right {
+  background-color: rgb(223, 23, 27);
+  color: white;
+  &:hover {
+    background-color: rgba(255, 0, 0, 0.913);
+    color: white;
+  }
+}
+
+.cart-popup_footer-left {
+  width: 100%;
+}
+
+.item-detail-page {
+  &_price {
+    font-size: 1rem;
+    color: black;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    &-sale {
+      margin-right: 1rem;
+      font-weight: 500;
+    }
+    &-real_sale {
+      font-style: italic;
+      text-decoration-line: line-through;
+      font-size: 1rem;
+    }
+    &-real {
+      display: inline-block;
+      color: black;
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.item-detail_price-real {
+  font-size: 1.2rem;
+  color: black;
+}
+
+.price-detail-page {
+  text-decoration-line: underline;
+}
+
+.price {
+  text-decoration-line: underline;
+
+  &-sale {
+    font-style: italic;
+    text-decoration-line: underline;
+    font-size: 0.8rem;
+  }
+}

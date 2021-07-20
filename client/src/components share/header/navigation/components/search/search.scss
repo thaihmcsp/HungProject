@@ -1,0 +1,27 @@
+.SearchForm {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(254, 195, 93);
+  border-radius: 4px;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 42px;
+  right: 0px;
+  background-color: white;
+}
+
+.SearchForm.active {
+  display: block;
+}
+
+.hr-search {
+  border: 1px solid rgb(254, 195, 93);
+}
+
+@media screen and (max-width: 1200px) {
+  .SearchForm {
+    width: 342px;
+  }
+}

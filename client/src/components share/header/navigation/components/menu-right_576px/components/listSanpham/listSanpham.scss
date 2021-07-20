@@ -1,0 +1,86 @@
+.list-sanpham {
+  background-color: white;
+  width: 160px;
+  position: absolute;
+  left: -170px;
+  border-radius: 3px;
+  top: -2px;
+  display: none;
+  will-change: opacity;
+  animation: animation-for-list-sanpham 0.5s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  &::after {
+    content: "";
+    border: 12px solid;
+    border-color: transparent transparent transparent rgb(255, 255, 255);
+    position: absolute;
+    left: 153px;
+    top: 8px;
+  }
+
+  &_ul {
+    background-color: rgb(245, 240, 227);
+    margin: 0 6px;
+  }
+}
+
+@keyframes animation-for-list-sanpham {
+  0% {
+    opacity: 0;
+    left: -189px;
+    top: 22px;
+  }
+  100% {
+    opacity: 1;
+    left: -170px;
+    top: -2px;
+  }
+}
+
+.after38:after {
+  content: "";
+  transition: 0.5s all ease;
+  position: absolute;
+  bottom: -0.25em;
+  height: 1px;
+  width: 0;
+  background-color: black !important;
+}
+.first38:after {
+  left: 0;
+}
+.after38:hover:after {
+  width: 100%;
+}
+
+.list-sanpham_item {
+  width: 148px;
+  height: 34px;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 4px 14px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out 0s;
+
+  &_link {
+    width: 138px;
+    display: inline-block;
+    color: black;
+    &:hover {
+      color: black;
+    }
+  }
+
+  &:hover {
+    background-color: white;
+    color: black;
+    .first38:after {
+      width: 100%;
+    }
+  }
+
+  &_content {
+    position: relative;
+  }
+}
